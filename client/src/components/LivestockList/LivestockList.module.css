@@ -1,0 +1,28 @@
+.container {
+
+}
+
+.containerAllLists {
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+}
+.containerAllLists ul {
+    list-style: none;
+}
+
+.containerList {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    border: 1px solid green;
+    
+}

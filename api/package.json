@@ -10,7 +10,6 @@
   "author": "micaelamedina",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.1",
