@@ -9,14 +9,16 @@ import { FiLogOut } from "react-icons/fi/index";
 import s from "./NavBar.module.css";
 import logo from "../images/logo.png";
 
+//Import alerts.
+import Swal from "sweetalert2";
+
 // Navigation bar component.
 export default function NavBar() {
   // Controller function to indicate that the functionality is under development.
   const handleClickIcon = (event) => {
     event.preventDefault();
-    alert("Funcionalidad en desarrollo.");
+    Swal.fire("Funcionalidad en desarrollo", "", "warning");
   };
-
   return (
     <div className={s.container}>
       <nav>

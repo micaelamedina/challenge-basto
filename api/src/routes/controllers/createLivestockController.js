@@ -1,5 +1,6 @@
 const Livestock = require("../../models/Livestock");
 
+// Controller function for creation of new livestock.
 async function createLivestockController({
   idSenasa,
   animalType,

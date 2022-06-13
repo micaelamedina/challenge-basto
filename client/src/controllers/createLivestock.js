@@ -1,6 +1,14 @@
+/* Handler functions for CreateLivestock component */
+
 //New animal creation form validator function.
-export const formValidate = (form) => {
+export const formValidate = (form, data) => {
   let errors = {};
+  let idFilter = data.filter(
+    (e) => e.idSenasa.toLowerCase() === form.idSenasa.toLowerCase()
+  );
+  if (idFilter[0]?.idSenasa) {
+    errors.idSenasa = "Ya existe un registro con ese ID.";
+  }
   if (form.idSenasa.length !== 16) {
     errors.idSenasa =
       "El ID de Senasa debe contener 16 caracteres alfanuméricos.";
@@ -29,7 +37,7 @@ export const formValidate = (form) => {
       "Debe ingresar el número de dispositivo. (Hasta 8 caracteres)";
   }
   if (form.deviceNumber.length === 0) {
-    errors.idSenasa =
+    errors.deviceNumber =
       "Debe ingresar el número de dispositivo. (8 caracteres alfanuméricos).";
   }
   return errors;

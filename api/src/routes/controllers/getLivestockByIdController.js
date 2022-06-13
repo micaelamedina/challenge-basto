@@ -1,8 +1,9 @@
 const Livestock = require("../../models/Livestock");
 
+// Controller function for search by ID Senasa.
 async function getLivestockByIdController(id) {
   try {
-    const livestock = await Livestock.findById(id);
+    const livestock = await Livestock.find({ idSenasa: id });
     if (livestock === null) {
       return { message: "Cannot find livestock" };
     } else {

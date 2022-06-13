@@ -31,6 +31,9 @@ server.use((req, res, next) => {
 });
 server.use(express.json());
 
+// Application routes. 
+// URL: --> http://localhost:3001/livestock/
+
 server.use("/livestock", createLivestock);
 server.use("/livestock", deleteLivestock);
 server.use("/livestock", getLiveStock);

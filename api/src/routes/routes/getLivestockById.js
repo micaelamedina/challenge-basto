@@ -5,7 +5,7 @@ const {
   getLivestockByIdController,
 } = require("../controllers/getLivestockByIdController");
 
-// Get livestock by id.
+// Get livestock by ID Senasa.
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {

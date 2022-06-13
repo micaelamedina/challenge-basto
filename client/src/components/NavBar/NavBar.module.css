@@ -3,6 +3,7 @@
     flex-direction: row;
     width: 100%;
     box-shadow: 2px 2px 5px rgb(177, 174, 174);
+    background-color: white;
 }
 .container nav {
     width: 100%;

@@ -1,3 +1,5 @@
+/* Handler functions for LivestockList component */
+
 import axios from "axios";
 
 export const getAllLivestock = async () => {

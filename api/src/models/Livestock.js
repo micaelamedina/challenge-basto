@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
+// Database model with Mongoose.
 const livestockSchema = new Schema({
   idSenasa: {
     type: String,

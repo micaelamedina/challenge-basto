@@ -1,0 +1,42 @@
+.containerTitle {
+    display: flex;
+    width: 100%;
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid  rgb(88, 87, 87);
+    border-bottom: 1px solid  rgb(88, 87, 87);
+    background-color: rgba(219, 216, 216, 0.823);
+}
+
+.containerCard {
+    display: flex;
+    width: 100%;
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(88, 87, 87);
+    border-bottom: 1px solid  rgb(88, 87, 87);
+    background-color: rgba(238, 231, 231, 0.242);
+}
+
+.containerTitle p {
+    width: 150px;
+}
+
+.containerCard p {
+    width: 150px;
+}
+
+.containerIcons {
+    display: flex;
+    width: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.idSenasa {
+    width: 200px;
+}

@@ -1,6 +1,7 @@
 const Livestock = require("../../models/Livestock");
 const { getLivestockByIdController } = require("./getLivestockByIdController");
 
+// Controller function for updating of the livestock.
 async function updateLivestockController(id, data) {
   const {
     idSenasa,
