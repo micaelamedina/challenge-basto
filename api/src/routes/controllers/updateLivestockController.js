@@ -12,16 +12,19 @@ async function updateLivestockController(id, data) {
     deviceNumber,
   } = data;
   try {
-    await Livestock.updateOne({_id: id}, {
-      $set: {
-        idSenasa,
-        animalType,
-        weight,
-        namePaddock,
-        deviceType,
-        deviceNumber,
-      },
-    });
+    await Livestock.updateOne(
+      { _id: id },
+      {
+        $set: {
+          idSenasa,
+          animalType,
+          weight,
+          namePaddock,
+          deviceType,
+          deviceNumber,
+        },
+      }
+    );
     return { message: "Update" };
   } catch (error) {
     return { message: error.message };
