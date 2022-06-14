@@ -17,8 +17,8 @@ export const formValidate = (form, data) => {
     errors.idSenasa =
       "Debe ingresar el ID de Senasa. (16 caracteres alfanuméricos).";
   }
-  if (form.weigth === 0) {
-    errors.weigth = "Debe ingresar el peso.";
+  if (form.weight === 0 || form.weight === "") {
+    errors.weight = "Debe ingresar un peso válido.";
   }
   if (form.namePaddock.length === 0) {
     errors.namePaddock =
@@ -36,16 +36,10 @@ export const formValidate = (form, data) => {
     errors.deviceNumber =
       "Debe ingresar el número de dispositivo. (Hasta 8 caracteres)";
   }
-  if (form.deviceNumber.length === 0) {
+  if (form.deviceNumber.length < 8 || form.deviceNumber.length > 8) {
     errors.deviceNumber =
-      "Debe ingresar el número de dispositivo. (8 caracteres alfanuméricos).";
+      "Debe ingresar 8 caracteres alfanuméricos.";
   }
-  return errors;
-};
-
-//Device type and animal type selection validation.
-export const selectValidate = (form) => {
-  let errors = {};
   if (form.animalType === "") {
     errors.animalType = "Debe seleccionar tipo de animal";
   }

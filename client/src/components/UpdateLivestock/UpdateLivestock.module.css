@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.containerForm {
+    justify-content: center;
+    position: fixed;
+    width: 500px;
+    height: 450px;
+    z-index: 5;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.containerInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(174, 174, 174, 0.571);
+}
+
+.containerButton {
+    cursor: pointer;
+}
+
+.modalCloseButton {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(116, 116, 116, 0.593);
+}
+
+.containerForm form {
+    width: 80%;
+}
+
+.containerButton button {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.buttonConfirm{
+    background-color: rgb(149, 177, 71);
+    color: white;
+    border: 1px solid rgba(149, 177, 71, 0.732);
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    margin: 7px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.errorP {
+    color: red;
+    font-size: 10px;
+}

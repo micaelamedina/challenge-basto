@@ -7,6 +7,7 @@ const router = Router();
 // Update one livestock.
 router.patch("/:id", async (req, res) => {
   const { id } = req.params;
+  console.log(req.body)
   try {
     const deleteLivestock = await updateLivestockController(id, req.body);
     res.json(deleteLivestock);

@@ -8,13 +8,11 @@ import CardLivestock from "./CardLivestock/CardLivestock";
 
 // Data list.
 export default function LivestockList({
-  modalUpdate,
-  setModalUpdate,
   livestockToRender,
   setLivestock,
 }) {
   return (
-    <div>
+    <div className={s.container}>
       <CardLivestock
         idSenasa={<b>ID Senasa</b>}
         weight={<b>Peso</b>}
@@ -41,8 +39,6 @@ export default function LivestockList({
               type={"card"}
               _id={e._id}
               key={e._id}
-              modalUpdate={modalUpdate}
-              setModalUpdate={setModalUpdate}
               setLivestock={setLivestock}
             />
           ))}

@@ -4,12 +4,10 @@ import React, { useEffect, useState } from "react";
 //Components.
 import LivestockList from "../LivestockList/LivestockList";
 import NavBar from "../NavBar/NavBar";
-import SearchBar from "../SearchBar/SearchBar";
 import CreateLivestock from "../CreateLivestock/CreateLivestock";
 
 //Utils.
 import s from "./Home.module.css";
-import UpdateLivestock from "../UpdateLivestock/UpdateLivestock";
 
 //Principal page component.
 export default function Home() {
@@ -56,6 +54,7 @@ export default function Home() {
         setLivestockFilter(result.data);
       })
       .catch((error) => console.log(error));
+    setSearch("");
   };
 
   // Reset filters by search.
@@ -73,21 +72,23 @@ export default function Home() {
   return (
     <div>
       <NavBar />
-      <h2>Búsqueda por ID de Senasa</h2>
-      <form>
+      <h2>Administración de ganado</h2>
+      <button onClick={(event) => handleClickCreate(event)} className={s.buttonCreate}>
+          Crear nuevo ganado
+        </button>
+      <form className={s.formSearch}>
+      <label>Búsqueda por ID de Senasa</label>
         <input
           value={search}
           type={"search"}
           placeholder="Ingrese ID a buscar..."
           onChange={(event) => handleChangeInput(event)}
+          className={s.inputSearch}
         />
-        <button onClick={(event) => handleClickSearch(event)}>Buscar</button>
+        <button onClick={(event) => handleClickSearch(event)} className={s.buttonSearch}>Buscar</button>
       </form>
-
       <div>
-        <button onClick={(event) => handleClickCreate(event)}>
-          Crear nuevo ganado
-        </button>
+        
         {modalCreate && (
           <CreateLivestock
             modalCreate={modalCreate}
@@ -98,15 +99,17 @@ export default function Home() {
       </div>
       {livestockFilter?.length ? (
         <div>
-          <h2>Resultado de búsqueda</h2>
-          <button onClick={(event) => handleClickReset(event)}>
+          <h3>Resultado de búsqueda</h3>
+          <button onClick={(event) => handleClickReset(event)} className={s.buttonReset}>
             Restablecer filtros
           </button>
         </div>
       ) : (
-        <h2>Listado completo de ganado</h2>
+        <div className={s.containerH4}>
+        <h4>Listado completo de ganado</h4>
+        </div>
       )}
-
+<div className={s.containerList}>
       <LivestockList
         livestockToRender={
           livestockFilter?.length ? livestockFilter : livestock
@@ -115,12 +118,7 @@ export default function Home() {
         setModalUpdate={setModalUpdate}
         setLivestock={setLivestock}
       />
-      {modalUpdate && (
-        <UpdateLivestock
-          modalUpdate={modalUpdate}
-          setModalUpdate={setModalUpdate}
-        />
-      )}
+      </div>
     </div>
   );
 }

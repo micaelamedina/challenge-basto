@@ -1,0 +1,62 @@
+.formSearch {
+    margin: 30px;
+}
+
+.buttonSearch{
+    background-color: rgb(149, 177, 71);
+    color: white;
+    border: 1px solid rgba(149, 177, 71, 0.732);
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    margin: 7px;
+    cursor: pointer;
+}
+
+.inputSearch {
+    width: 500px;
+    height: 28px;
+    border: 1px solid rgba(128, 128, 128, 0.247);
+    border-radius: 5px;
+    margin: 5px
+}
+
+.buttonCreate {
+    background-color: rgb(149, 177, 71);
+    color: white;
+    border: 1px solid rgba(149, 177, 71, 0.732);
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-top:0;
+    cursor: pointer;
+}
+
+.buttonReset {
+    background-color: rgb(149, 177, 71);
+    color: white;
+    border: 1px solid rgba(149, 177, 71, 0.732);
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    margin-left: 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.containerH4 {
+    display: flex;
+    justify-content: center;
+}
+
+h3, h2{
+    margin: 20px;
+    color: rgb(94, 94, 94);
+}
+h4 {
+    color: rgb(94, 94, 94);
+}

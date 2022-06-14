@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //Utils.
 import s from "./CardLivestock.module.css";
@@ -14,6 +14,7 @@ import { handleClickDelete } from "../../../controllers/deleteLivestock";
 //Import alerts.
 import Swal from "sweetalert2";
 import axios from "axios";
+import UpdateLivestock from "../../UpdateLivestock/UpdateLivestock";
 
 // Cards for the data list.
 export default function CardLivestock({
@@ -26,11 +27,9 @@ export default function CardLivestock({
   deviceNumber,
   actions,
   type,
-  setModalUpdate,
-  modalUpdate,
   setLivestock,
 }) {
-
+  const [modalUpdate, setModalUpdate] = useState(false);
   // Controller function to open modification form.
   const handleClickEdit = (event) => {
     event.preventDefault();
@@ -85,6 +84,15 @@ export default function CardLivestock({
       ) : (
         <p>{actions}</p>
       )}
+      {
+        modalUpdate && <UpdateLivestock
+        modalUpdate={modalUpdate}
+        setModalUpdate={setModalUpdate}
+        idDb={_id}
+        id={idSenasa}
+        setLivestock={setLivestock}
+      />
+      }
     </div>
   );
 }
