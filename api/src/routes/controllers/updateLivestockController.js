@@ -12,7 +12,7 @@ async function updateLivestockController(id, data) {
     deviceNumber,
   } = data;
   try {
-    await Livestock.findOneAndUpdate(id, {
+    await Livestock.updateOne({_id: id}, {
       $set: {
         idSenasa,
         animalType,

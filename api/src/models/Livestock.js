@@ -6,7 +6,6 @@ const livestockSchema = new Schema({
   idSenasa: {
     type: String,
     required: true,
-    unique: true,
   },
   animalType: {
     type: String,
@@ -39,11 +38,3 @@ const livestockSchema = new Schema({
 });
 
 module.exports = mongoose.model("Livestock", livestockSchema);
-
-// Los datos de los animales a guardar y sus tipos son:
-// ● ID SENASA (Alfanumerico 16 chars)
-// ● Tipo Animal (Novillo, Toro, Vaquillona)
-// ● Peso animal (kg)
-// ● Nombre de potrero.(Texto hasta 200 chars)
-// ● Tipo de Dispositivo (COLLAR, CARAVANA)
-// ● Número de dispositivo. (Alfanumerico 8 caracteres)
